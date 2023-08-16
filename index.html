@@ -14,6 +14,9 @@
   <h1>powerZus Robot</h1>
   <button type="submit" class="btn btn-info" onclick="getblynkfwrd()">FORWARD</button>
    <button type="submit" class="btn btn-info" onclick="getblynkbckwrd()">BACKWARD</button>
+
+    <button type="submit" class="btn btn-info" onclick="getblynkleft()">LEFT</button>
+   <button type="submit" class="btn btn-info" onclick="getblynkright()">RIGHT</button>
 </div>
 
 <script>
@@ -25,6 +28,18 @@
 
   function getblynkbckward(){
   $.get("https://blynk.cloud/external/api/update?token=Hr-hTiTKME5xAZbiwEn2aZeeH_DrFGPc&V1=1", (data, status) => {
+    console.log(data);
+  });
+  }
+
+  function getblynkleft(){
+  $.get("https://blynk.cloud/external/api/update?token=Hr-hTiTKME5xAZbiwEn2aZeeH_DrFGPc&V2=1", (data, status) => {
+    console.log(data);
+  });
+  }
+
+  function getblynkright(){
+  $.get("https://blynk.cloud/external/api/update?token=Hr-hTiTKME5xAZbiwEn2aZeeH_DrFGPc&V3=1", (data, status) => {
     console.log(data);
   });
   }
