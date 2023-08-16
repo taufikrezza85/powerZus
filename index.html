@@ -11,12 +11,21 @@
 <body>
 
 <div class="container">
-  <h1>powerZus Robot</h1>
-  <button type="submit" class="btn btn-info" onclick="getblynkfwrd()">FORWARD</button>
-   <button type="submit" class="btn btn-info" onclick="getblynkbckwrd()">BACKWARD</button>
+  <center><h1>powerZus Robot</h1></center><br>
+  <center>
+  <button type="submit" class="btn btn-info" onclick="getblynkfwrd()">FORWARD</button><br>
+  <button type="submit" class="btn btn-info" onclick="getblynkleft()">LEFT</button>
+  <button type="submit" class="btn btn-info" onclick="getblynkstop()">STOP</button>
+     <button type="submit" class="btn btn-info" onclick="getblynkright()">RIGHT</button><br>
+   <button type="submit" class="btn btn-info" onclick="getblynkbckwrd()">BACKWARD</button><br><br>
+ </center>
 
-    <button type="submit" class="btn btn-info" onclick="getblynkleft()">LEFT</button>
-   <button type="submit" class="btn btn-info" onclick="getblynkright()">RIGHT</button>
+    
+
+<center>
+       <button type="submit" class="btn btn-info" onclick="getblynkopen()">GRIP OPEN</button><br>
+   <button type="submit" class="btn btn-info" onclick="getblynkclose()">GRIP CLOSE</button><br>
+ </center>
 </div>
 
 <script>
@@ -26,7 +35,7 @@
   });
   }
 
-  function getblynkbckward(){
+  function getblynkbckwrd(){
   $.get("https://blynk.cloud/external/api/update?token=Hr-hTiTKME5xAZbiwEn2aZeeH_DrFGPc&V1=1", (data, status) => {
     console.log(data);
   });
@@ -43,6 +52,24 @@
     console.log(data);
   });
   }
+
+  function getblynkopen(){
+  $.get("https://blynk.cloud/external/api/update?token=Hr-hTiTKME5xAZbiwEn2aZeeH_DrFGPc&V5=1", (data, status) => {
+    console.log(data);
+  });
+  }
+
+  function getblynkclose(){
+  $.get("https://blynk.cloud/external/api/update?token=Hr-hTiTKME5xAZbiwEn2aZeeH_DrFGPc&V4=1", (data, status) => {
+    console.log(data);
+  });
+  }
+
+   function getblynkstop(){
+  $.get("https://blynk.cloud/external/api/update?token=Hr-hTiTKME5xAZbiwEn2aZeeH_DrFGPc&V6=1", (data, status) => {
+    console.log(data);
+  });
+  } 
 </script>
 
 </body>
