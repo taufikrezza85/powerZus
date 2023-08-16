@@ -12,12 +12,19 @@
 
 <div class="container">
   <h1>powerZus Robot</h1>
-  <button type="submit" class="btn btn-info" onclick="getblynk()">GRIPPER OPEN</button>
+  <button type="submit" class="btn btn-info" onclick="getblynkfwrd()">FORWARD</button>
+   <button type="submit" class="btn btn-info" onclick="getblynkbckwrd()">BACKWARD</button>
 </div>
 
 <script>
-  function getblynk(){
-  $.get("https://blynk.cloud/external/api/update?token=Hr-hTiTKME5xAZbiwEn2aZeeH_DrFGPc&V5=1", (data, status) => {
+  function getblynkfwrd(){
+  $.get("https://blynk.cloud/external/api/update?token=Hr-hTiTKME5xAZbiwEn2aZeeH_DrFGPc&V0=1", (data, status) => {
+    console.log(data);
+  });
+  }
+
+  function getblynkbckward(){
+  $.get("https://blynk.cloud/external/api/update?token=Hr-hTiTKME5xAZbiwEn2aZeeH_DrFGPc&V1=1", (data, status) => {
     console.log(data);
   });
   }
